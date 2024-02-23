@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/go-round.css">
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.jpg"
+    />
+
+    <!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Antal Berenyi | Software Developer</title>
+  </head>
+
+  <body onload="initAnimation()">
+    <!-- Navbar -->
+    <nav>
+        
+        <h1>
+            <img src="assets/images/Duke_(Java_mascot)_waving.svg" width="32px" alt="Duke" title="By sbmehta converted to SVG from Sun Microsystems AI version. - https://web.archive.org/web/20150908150109/https://duke.kenai.com/wave/index.html (new), https://web.archive.org/web/20070723050813/https://duke.dev.java.net/images/wave/index.html (old), BSD, https://commons.wikimedia.org/w/index.php?curid=3232280">
+            <span>ANTAL BERENYI</span>
+        </h1>
+
+        <ul class="navigation">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="burger-menu" id="burger-menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+  </nav>
+
+    <!-- Hero Section -->
+
+    
+    <section class="hero" id="about">
+        <img
+            src="assets/images/AntalBerenyi.jpg"
+            alt="antal"
+            loading="lazy"
+            class="hero-img"
+        />
+        <div class="bio animate__animated animate__shakeX">
+            <h2 class="bio-title">About Me</h2>
+            <p class="bio-text">
+            I am a skilled software engineer with 15 years of experience in biotech sector. 
+            I have specialized in Laboratory Information Management System development,
+            including assay workflow management and data storage to data analysis and 
+            visualization.
+            </p>
+        </div>
+    </section>
+
+    <!-- More about -->
+    <section class="more-about">
+    <h2>More About Me</h2>
+    <h3>Passionate Scientist and Software Engineer</h3>
+    
+    <p>As a Physics undergrad and software engineer, I find inspiration in providing software 
+        solutions to scientific questions and tasks, streamlining computational processes, 
+        and enhancing data analysis. My journey began with a desire to reduce repetitive work 
+        and create efficient solutions. Whether it is optimizing database queries or designing 
+        robust algorithms, I thrive on turning complex challenges into elegant code.</p>
+
+    <h3>Bridging Software and Pharma</h3>
+
+    <p>My professional journey has led me to the exciting intersection of biotechnology and 
+        computer science. I've contributed to LIMS (Laboratory Information Management System) 
+        software development, where precision and accuracy are paramount. My expertise extends 
+        to database design, assay automation, data analysis, and user interface development. 
+        I'm passionate about creating tools that empower researchers to make informed decisions.</p>
+
+    <h3>Problem-Solver and Innovator</h3>
+    <p>When faced with a problem, I dive deep, understanding its nuances and implications. 
+        I collaborate with experts, translating their domain knowledge into practical solutions. 
+        My approach involves breaking down complex challenges into manageable components. 
+        Whether it's optimizing drug discovery workflows or ensuring compliance, I'm committed to 
+        making a positive impact. Join me on this journey of innovation and transformation.</p>
+    </section>
+
+
+
+    <!-- Skills section -->
+    
+    <div id="controls" style="display: none;">
+        <button onclick="myMove()">Start</button> 
+        <button onclick="myStop()">Stop</button> 
+        <div id="xy"> x=0; y=0; theta=0 </div>
+    
+        </p>
+    
+        <p>Drag the slider to display change Radius: <span id="r"></span>.</p>
+    
+        <div class="slidecontainer">
+        <input type="range" min="0" max="175" value="150" class="slider" id="myRange"> </p>
+        </div>
+    </div>
+    
+
+
+    <section class="skills" id="skills">
+        <h2 class="skill-header">My Top Skills</h2>
+
+
+
+  
+        <div class="skills-wrapper">
+
+          <div class="first-set animate__animated animate__pulse">
+
+                <div id ="myContainer">
+                <div id ="myCenter" class="myAnimation "></div>
+                <div id ="myAnimation0" class="myAnimation"></div>
+                <div id ="myAnimation1" class="myAnimation"></div>
+                <div id ="myAnimation2" class="myAnimation"></div>
+                <div id ="myAnimation3" class="myAnimation"></div>
+                <div id ="myAnimation4" class="myAnimation"></div>
+          </div>
+
+          <!--
+          <div class="first-set animate__animated animate__pulse">
+            <img            
+              src="assets/icons/Tatice-Cristal-Intense-Java.256.png"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+            <img
+              src="assets/icons/icons8-html-5.svg"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+            <a href="https://www.flaticon.com/free-icons/coding" title="coding icons">Coding icons created by Freepik - Flaticon</a>
+            <img
+              src="assets/icons/c-.png"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+          </div>
+  
+          <div class="second-set animate__animated animate__pulse">
+            <img
+              src="assets/icons/Icons8-Ios7-Programming-Sql.512.png"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />            
+            <img
+              src="assets/icons/Cornmanthe3rd-Plex-Other-python.512.png"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+             <a href="https://www.freepik.com/icon/machine-learning_8618881">Icon by jojooid</a>
+            <img
+              src="assets/icons/machine-learning_8618881.png"
+              alt=""
+              loading="lazy"
+              class="icon icon-card"
+            />
+        -->
+          </div>
+        </div>
+      </section>
+
+    <!-- Projects section -->
+    <section class="projects" id="projects">
+        <h2 class="projects-title">Some of my Recent Projects</h2>
+        
+        <div class="projects-container">
+          <div class="project-container project-card">
+            <img
+              src="assets/images/BioMAPViewer.png"
+              alt="expense-tracker"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="project-title">Cheminformatics</h3>
+            <p class="project-details">
+              Drug database and user interface to investigate compound effects in human cell cultures. Java and Oracle back-end based solution.
+            </p>
+            <a href="#" target="_blank" class="project-link">Check it Out</a>
+          </div>
+          
+          <div class="project-container project-card">
+            <img
+              src="assets/images/Uploader Heatmap.png"
+              alt="netflic-clone"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="project-title">HTS Assay Management</h3>
+            <p class="project-details">
+              LIMS application developed in Java to track workflow, plate data, QC and dosing requirements.
+            </p>
+            <a href="#" target="_blank" class="project-link">Check it Out</a>
+          </div>
+          
+          <div class="project-container project-card">
+            <img
+              src="assets/images/QAQC.png"
+              alt="greeny-earth"
+              loading="lazy"
+              class="project-pic"
+            />
+            <h3 class="project-title">Cell Culture QC</h3>
+            <p class="project-details">
+              Track changes to quality indicators of human primary cell cultures grown in laboratory. Rich, interactive display in Tableau.
+            </p>
+            <a href="#" target="_blank" class="project-link">Check it Out</a>
+          </div>
+        </div>
+      </section>
+
+    <!-- Contact section -->
+
+    <section class="contact" id="contact">
+        <h2>Send Me a Note</h2>
+        <div class="contact-form-container">
+          <div class="contact-form">
+            <form action="https://formspree.io/f/xyyrjyda" method="POST">
+              <div class="form-control">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="sender-name"
+                  placeholder="Enter Your Name"
+                  class="input-field"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="sender-email"
+                  placeholder="Enter Your Email"
+                  class="input-field"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  cols="60"
+                  rows="10"
+                  placeholder="Enter Your Message"
+                  name="message"
+                  class="input-field"
+                  required
+                ></textarea>
+              </div>
+              <input
+                type="submit"
+                value="Submit"
+                id="submit-btn"
+                class="submit-btn"
+              />
+            </form>
+          </div>
+        </div>
+      </section>
+
+    <!-- Social accounts - Fixed to the right -->
+    <div class="socials">
+        <a href="https://www.linkedin.com/in/aberenyi/" target="_blank"
+          ><img
+            src="assets/icons/icons8-linkedin-circled.gif"
+            alt="Linkedin"
+            loading="lazy"
+            class="socicon"
+        /></a>
+        <a href="https://github.com/aberenyi73" target="_blank"
+          ><img src="assets/icons/icons8-github.gif" alt="Github" class="socicon"
+        /></a>
+    </div>
+
+    <!-- Scroll to top -->
+    <i class="scroll-up" id="scroll-up"
+    ><img
+      src="assets/icons/icons8-upward-arrow.gif"
+      class="socicon up-arrow"
+      alt="scroll-up"
+  /></i>
+    <!-- Footer section -->
+
+    <footer>
+        <p class="copy">&copy; Copyright <script>document.write( new Date().getFullYear() );</script></p>
+
+    </footer>
+
+    <!-- Website scripts -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Ion icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+        // scroll to top functionality
+        const scrollUp = document.querySelector("#scroll-up");
+
+        scrollUp.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+        });
+        });
+    </script>
+    <!-- go-round script -->
+    <script src="/assets/js/go-round.js"></script>
+
+  </body>
+</html>

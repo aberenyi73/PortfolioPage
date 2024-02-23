@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.test {
+    color: blue;
+}
+
+.nav_bar {
+    background-color: black;
+    display: flex;
+}
+
+.nav_link {
+    color: white;
+}
+
+.nav_name {
+    display: flex; /* Means that div can go side-by-side */
+    color: white;
+    gap: 2rem;
+    padding: 3vh;
+}
+
+.nav_links_div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    padding: 3vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}

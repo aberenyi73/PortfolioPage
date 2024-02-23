@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/css/go-round.css">
+    </head>
+
+<body onload="initAnimation()">
+
+<p>
+<div id="controls">
+    <button onclick="myMove()">Start</button> 
+    <button onclick="myStop()">Stop</button> 
+    <div id="xy"> x=0; y=0; theta=0 </div>
+</div>
+</p>
+
+<p>Drag the slider to display change Radius: <span id="r"></span>.</p>
+
+<div class="slidecontainer">
+  <input type="range" min="0" max="175" value="150" class="slider" id="myRange"> </p>
+</div>
+
+
+<div id ="myContainer">
+<div id ="myCenter"></div>
+<div id ="myAnimation0"></div>
+<div id ="myAnimation1"></div>
+<div id ="myAnimation2"></div>
+<div id ="myAnimation3"></div>
+<div id ="myAnimation4"></div>
+
+
+
+<!-- Website scripts -->
+<script src="assets/js/go-round.js"></script>
+
+</body>
+</html>

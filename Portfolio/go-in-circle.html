@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<style>
+.slidecontainer {
+  width: 50%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+</style>
+
+<style>
+/* Animation */ 
+#myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  background-color: yellow;
+  text-align: center;
+  vertical-align: bottom;
+  background-image: url('IMG_0825.png');
+  /*
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  */
+  background-size: 100% 100%;
+
+}
+#myAnimation2 {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  background-color: yellow;
+  text-align: center;
+  vertical-align: bottom;
+  background-image: url('assets/icons/machine-learning_8618881.png');
+  background-size: 100% 100%;
+}
+#myAnimation3 {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  background-color: yellow;
+  text-align: center;
+  vertical-align: bottom;
+  background-image: url('assets/icons/icons8-html-5.svg');
+  background-size: 100% 100%;
+}
+
+
+
+</style>
+
+<style>
+ #controls {
+    display: flex;
+    align-items: center; /* Vertically align the elements to the center */
+    /* Other styling properties like width, border, etc. */
+  }
+ 
+  #xyz {
+    margin-left: auto; /* Push the button to the right */
+  }
+</style>
+
+<body onload="initAnimation()">
+
+
+<p>
+<div id="controls">
+<button onclick="myMove()">Start</button> 
+<button onclick="myStop()">Stop</button> 
+
+<div id="xy">x=0; y=0; theta=0 </div>
+</div>
+</p>
+
+<p>Drag the slider to display change Radius: <span id="r"></span>.</p>
+
+<div class="slidecontainer">
+  <input type="range" min="0" max="175" value="150" class="slider" id="myRange"> </p>
+</div>
+
+
+<div id ="myContainer"></div>
+<div id ="myAnimation"></div>
+<div id ="myAnimation2"></div>
+<div id ="myAnimation3"></div>
+
+
+
+<script>
+</script>
+
+<script>
+// Animation
+let id = null;
+let PADDING = 175; // given by the dimensions of the container: 200 - (hight/2)
+let r = 100; // the radius of movement
+let xpos = PADDING + r ; // elem.left
+let ypos = PADDING;      // elem.top
+let theta = 0;
+let elem = document.getElementById("myAnimation"); 
+let elem2 = document.getElementById("myAnimation2"); 
+let elem3 = document.getElementById("myAnimation3"); 
+
+  
+// Slider
+var slider = document.getElementById("myRange");
+var rValue = document.getElementById("r");
+rValue.innerHTML = slider.value;
+slider.oninput = function() {
+  r = this.value; // set radius of motion
+  rValue.innerHTML = this.value;
+  //elem.innerHTML = r;
+}
+
+
+function initAnimation() {
+    setXY(0,0,0);
+
+    //elem.style.top = PADDING + 'px'; 
+    //elem.style.left = PADDING + r + 'px'; 
+
+    moveElem(elem, 0);
+    moveElem(elem2, 120);
+    moveElem(elem3, 240);
+
+
+}
+
+
+
+function myStop() {
+  clearInterval(id);
+}
+
+function radians(degrees) {
+    return degrees/180*Math.PI;
+}
+
+function setXY(x, y, theta) {
+  let xy = document.getElementById("xy"); 
+  xy.textContent = "x=" + x + "; y=" + y + "; theta=" + theta + " \u03C0";
+}
+
+function moveElem(item, angle) {
+    let x = Math.round(r*Math.cos(radians(theta)));
+    let y = Math.round(r*Math.sin(radians(theta)));
+ 
+    item.style.top = PADDING - y + 'px'; 
+    item.style.left = PADDING + x + 'px'; 
+}
+
+
+
+function myMove() {
+  
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  
+  function frame() {
+    if ( theta == 360 ) {
+        theta = 0;
+    }
+    
+    // Center of square moving
+    // counter-clockwise
+    /*let x = Math.round(r*Math.cos(radians(theta)));
+    let y = Math.round(r*Math.sin(radians(theta)));
+    elem.style.top = PADDING - y + 'px'; 
+    elem.style.left = PADDING + x + 'px'; 
+    */
+    moveElem(elem, theta);
+
+
+    setXY(x, y, Math.round(radians(theta) * 1000)/1000);
+
+
+
+    theta += 1; 
+   
+  }
+}
+</script>
+
+</body>
+</html>

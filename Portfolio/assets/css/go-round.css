@@ -1,0 +1,103 @@
+/* Variables */
+
+:root {
+    --bg-color: #fcfcfc;
+    --primary-color: hsl(116, 40%, 53%);
+    --secondary-color: #ff7235;
+    --anim-width: 100px;
+    --anim-height: 100px;
+  }
+  
+  .slidecontainer {
+    width: 50%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+
+  /* Animation */ 
+  #myContainer {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    background: var(--bg-color);
+    margin: auto;
+    
+  }
+
+  .myAnimation {
+    width: var(--anim-width);
+    height: var(--anim-height);
+    line-height: 50px;
+    position: absolute;
+    background-color: var(--bg-color);
+    text-align: center;
+    vertical-align: bottom;
+    background-size: 100% 100%;
+    background-color: var(--bg-color);
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 20px;
+    margin: 10px;
+  }
+
+  #myAnimation0 {
+    background-image: url('/assets/icons/icons8-html-5.svg');
+  }
+  #myAnimation1 {
+    background-image: url('/assets/icons/Tatice-Cristal-Intense-Java.256.png');
+  }
+  #myAnimation2 {
+    background-image: url('/assets/icons/machine-learning_8618881.png');
+  }
+  #myAnimation3 {
+    background-image: url('/assets/icons/c-.png');
+  }
+  #myAnimation4 {
+    background-image: url('/assets/icons/Cornmanthe3rd-Plex-Other-python.512.png');
+  }
+  
+  #myCenter {
+    width: 85px;
+    height: 100px;
+    background-image: url('/assets/images/BioMAPMan.png');
+    background-color: var(--bg-color);
+    position: absolute;
+    vertical-align: center;
+    border-radius: 80px / 80px;
+    background-size: 100% 100%;
+  }
+  
+   #controls {
+      display: flex;
+      align-items: center; /* Vertically align the elements to the center */
+      /* Other styling properties like width, border, etc. */
+    }
